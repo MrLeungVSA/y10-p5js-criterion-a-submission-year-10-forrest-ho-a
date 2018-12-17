@@ -123,7 +123,6 @@ function drawboss() {
 	    icecubex1 = 1000
 	    icecubex2 = 1000
 	    icecubex3 = 1000
-	    SkyBeamY = 5000
 	    homeSpeed = 1
 	    atk5();
 	    atk6();
@@ -164,7 +163,6 @@ function drawboss() {
 	    icecubex1 = 1000
 	    icecubex2 = 1000
 	    icecubex3 = 1000
-	    SkyBeamY = 5000
 	    homeSpeed = 1.5
 	    atk5();
 	    atk6();

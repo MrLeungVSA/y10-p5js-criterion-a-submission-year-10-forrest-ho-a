@@ -5,9 +5,24 @@ var Damageis0 = false
 var difficulty;
 var gameDuration = 0
 var correctAnswers = 0
+var bombItem
+var bigbombItem
+var giantbombItem
+var poisonItem
+var hpItem
+var fullItem
+var shieldItem
 
 function preload()
 {
+	preloadScroll();
+	bombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Bomb.png');
+	bigbombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/BigBomg.png');
+	giantbombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/GiantBomb.png');
+	poisonItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Poison.png');
+	hpItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/HealthPotion.png');
+	fullItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/FullRestore.png');
+	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Shield.png');
 
 }
 //problem at 460-510,395
@@ -71,6 +86,8 @@ function draw()
 		{
 			drawwinscreen();
 		}
+
+
 
 }
 

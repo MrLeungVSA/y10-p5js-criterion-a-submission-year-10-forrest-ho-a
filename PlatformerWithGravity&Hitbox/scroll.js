@@ -41,7 +41,7 @@ var InvincibilityTimer = 5
 
 var hasItem = false
 
-function preload()
+function preloadScroll()
 {
 	answers = 5;
 	answerHeight = [50,100,150,200,250]
@@ -90,11 +90,11 @@ Full Restore - 5%
 	}
 	if (generateLoot == true && GiveLoot == true)
 	{
-		if (loottype <= 20)
+		if (loottype <= 25)
 		{
 			Big = true
 		}
-		if (loottype >= 21 && loottype <= 80)
+		if (loottype >= 26 && loottype <= 80)
 		{
 			Small = true
 		}
@@ -102,11 +102,11 @@ Full Restore - 5%
 		{
 			HealthUp = true
 		}
-		if (loottype >= 91 && loottype <= 95)
+		if (loottype >= 91 && loottype <= 97)
 		{
 			Giant = true
 		}
-		if (loottype >= 96 && loottype <= 100)
+		if (loottype >= 98 && loottype <= 100)
 		{
 			FullHp = true
 		}
@@ -158,7 +158,7 @@ Full Restore - 5%
 	if (Small == true)
 	{
 		fill(255,188,0)
-		text('Bomb',playerX,playerY-10)
+		image(bombItem,playerX,playerY-25,25,25)
 		hasItem = true
 		Big = false
 		Giant = false
@@ -176,7 +176,7 @@ Full Restore - 5%
 	if (Big == true)
 	{
 		fill(255,188,0)
-		text('Big Bomb',playerX,playerY-10)
+		image(bigbombItem,playerX,playerY-25,25,25)
 		hasItem = true
 		Small = false
 		Giant = false
@@ -194,7 +194,7 @@ Full Restore - 5%
 	if (Giant == true)
 	{
 		fill(255,188,0)
-		text('Giant Bomb',playerX,playerY-10)
+		image(giantbombItem,playerX-45,playerY-45,50,50)
 		hasItem = true
 		Small = false
 		Big = false
@@ -212,7 +212,7 @@ Full Restore - 5%
 	if (HealthUp == true)
 	{
 		fill(255,188,0)
-		text('Health potion',playerX,playerY-10)
+		image(hpItem,playerX,playerY-25,25,25)
 		hasItem = true
 		Small = false
 		Big = false
@@ -230,7 +230,7 @@ Full Restore - 5%
 	if (FullHp == true)
 	{
 		fill(255,188,0)
-		text('Full restore',playerX,playerY-10)
+		image(fullItem,playerX,playerY-25,25,25)
 		hasItem = true
 		Small = false
 		Big = false
@@ -248,7 +248,7 @@ Full Restore - 5%
 	if (Immune == true)
 	{
 		fill(255,188,0)
-		text('Shield',playerX,playerY-10)
+		image(shieldItem,playerX,playerY-25,25,25)
 		hasItem = true
 		Small = false
 		Big = false
