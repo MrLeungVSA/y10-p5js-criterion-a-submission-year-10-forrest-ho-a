@@ -96,7 +96,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
-	image(IceImg,0,0,1000,700)
+	//image(IceImg,0,0,1000,700)
 
 
 
