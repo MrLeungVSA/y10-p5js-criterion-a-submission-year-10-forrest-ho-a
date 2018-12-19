@@ -20,18 +20,18 @@ var IceImg
 function preload()
 {
 	preloadScroll();
-	bombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Bomb.png');
-	bigbombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/BigBomg.png');
-	giantbombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/GiantBomb.png');
-	poisonItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Poison.png');
-	hpItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/HealthPotion.png');
-	fullItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/FullRestore.png');
-	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Shield.png');
-	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Shield.png');
-	bossSprite = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Boss.png');
-	backgroundImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/background.png');
-	PlatformImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Platform.png');
-	IceImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/IceCube.jpg');
+	bombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Bomb.png');
+	bigbombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/BigBomg.png');
+	giantbombItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/GiantBomb.png');
+	poisonItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Poison.png');
+	hpItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/HealthPotion.png');
+	fullItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/FullRestore.png');
+	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Shield.png');
+	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Shield.png');
+	bossSprite = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Boss.png');
+	backgroundImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/background.png');
+	PlatformImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Platform.png');
+	IceImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/IceCube.png');
 
 }
 //problem at 460-510,395
@@ -96,9 +96,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
-	//image(IceImg,0,0,1000,700)
-
-
+	//(IceImg,500,500,100,100)
 
 }
 
