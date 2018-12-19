@@ -16,6 +16,7 @@ var bossSprite
 var backgroundImg
 var PlatformImg
 var IceImg
+var BossSpritePhase
 
 function preload()
 {
@@ -32,6 +33,7 @@ function preload()
 	backgroundImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/background.png');
 	PlatformImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Platform.png');
 	IceImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/IceCubeProjectile.png');
+	BossSpritePhase = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Boss2.png');
 
 }
 //problem at 460-510,395
@@ -96,7 +98,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
-	//image(IceImg,600,600,100,100)
+	image(BossSpritePhase,600,600,100,100)
 }
 
 
