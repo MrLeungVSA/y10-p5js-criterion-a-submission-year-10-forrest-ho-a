@@ -12,6 +12,8 @@ var poisonItem
 var hpItem
 var fullItem
 var shieldItem
+var bossSprite
+var backgroundImg
 
 function preload()
 {
@@ -23,6 +25,9 @@ function preload()
 	hpItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/HealthPotion.png');
 	fullItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/FullRestore.png');
 	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Shield.png');
+	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Shield.png');
+	bossSprite = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Boss.png');
+	backgroundImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Boss.png');
 
 }
 //problem at 460-510,395
@@ -86,6 +91,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
+	//image(bossSprite,700,100,400,400)
 
 
 

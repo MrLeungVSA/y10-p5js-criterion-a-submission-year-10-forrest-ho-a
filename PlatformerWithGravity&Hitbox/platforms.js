@@ -6,6 +6,7 @@ var jump;
 var jumpCounter;
 var falling;
 var maxHeight;
+var platformmove;
 
 
 /*
@@ -186,7 +187,8 @@ function showPlatforms(questionID)
 			{
 				fill(125,125,125);
 			}
-			rect(platforms[c][0],platforms[c][1],platforms[c][2],platforms[c][3]);			
+			rect(platforms[c][0],platforms[c][1],platforms[c][2],platforms[c][3]);	
+			platforms[1][c] -=2;		
 		}
 	}		
 
@@ -222,7 +224,7 @@ function movePlatforms()
 
 			// this affects the speed of movement
 			// comment this if the platforms are not moving
-			platforms[c][0] -= 2;
+			platforms[c][0] += 3;
 
 		}
 

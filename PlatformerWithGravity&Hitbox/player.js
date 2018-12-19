@@ -94,6 +94,12 @@ function drawPlayer()
 		fill(255,0,0)
 	}
 	ellipse(playerX,playerY,10,15);
+	/*if (keyIsDown(8))
+	{
+		health = 5;
+		BossHp -= 1;
+		correctAnswers +=1;
+	}*/
 
 }
 

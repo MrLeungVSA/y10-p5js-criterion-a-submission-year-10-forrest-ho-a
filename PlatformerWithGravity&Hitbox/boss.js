@@ -86,6 +86,10 @@ var StormIsActive = 1
 var StormTimer = 5
 var IceBeamOn = true
 var thirdboss = false
+var bossPhase1 = false
+var bossPhase2 = false
+var bossPhase3 = false
+
 
 
 function setupboss() {
@@ -108,6 +112,9 @@ function drawboss() {
   {
 	  if (BossHp >= 30)
 	  {
+	  	bossPhase1 = true
+	  	bossPhase2 = false
+	  	bossPhase3 = false
 		if (xpos > width - rad || xpos < rad) {
 		xdirection *= -1;
 		}
@@ -120,6 +127,9 @@ function drawboss() {
 	  }
 	  if (BossHp <= 29  && BossHp >= 0)
 	  {
+	  	bossPhase1 = false
+	  	bossPhase2 = true
+	  	bossPhase3 = false
 	    icecubex1 = 1000
 	    icecubex2 = 1000
 	    icecubex3 = 1000
@@ -147,6 +157,9 @@ function drawboss() {
   	{
 	  if (BossHp >= 70)
 	  {
+	  	bossPhase1 = true
+	  	bossPhase2 = false
+	  	bossPhase3 = false
 		if (xpos > width - rad || xpos < rad) {
 		xdirection *= -1;
 		}
@@ -160,6 +173,9 @@ function drawboss() {
 	  }
 	  if (BossHp <= 69  && BossHp >= 41)
 	  {
+	  	bossPhase1 = false
+	  	bossPhase2 = true
+	  	bossPhase3 = false
 	    icecubex1 = 1000
 	    icecubex2 = 1000
 	    icecubex3 = 1000
@@ -169,6 +185,9 @@ function drawboss() {
 	  }
 	  if (BossHp <= 40)
 	  {
+	  	bossPhase1 = false
+	  	bossPhase2 = false
+	  	bossPhase3 = true
 	  	PyramidSpeed = 1
 	  	if (BossHp >= 1)
 	  	{
@@ -198,6 +217,9 @@ function drawboss() {
   {
 	  if (BossHp >= 140)
 	  {
+	  	bossPhase1 = true
+	  	bossPhase2 = false
+	  	bossPhase3 = false
 		if (xpos > width - rad || xpos < rad) {
 		xdirection *= -1;
 		}
@@ -208,8 +230,11 @@ function drawboss() {
 	    attack2();
 	    attack3();
 	  }
-	  if (BossHp <= 139  && BossHp >= 70)
+	  if (BossHp <= 140  && BossHp >= 70)
 	  {
+	  	bossPhase1 = false
+	  	bossPhase2 = true
+	  	bossPhase3 = false
 	    icecubex1 = 1000
 	    icecubex2 = 1000
 	    icecubex3 = 1000
@@ -219,6 +244,9 @@ function drawboss() {
 	  }
 	  if (BossHp <= 69)
 	  {
+	  	bossPhase1 = false
+	  	bossPhase2 = false
+	  	bossPhase3 = true
 	  	PyramidSpeed = 2
 	  	if (BossHp >= 1)
 	  	{
@@ -256,7 +284,6 @@ function drawboss() {
   	text('Knockout!',0,340)
 	Invincibility = true
 	InvincibilityTimer = 100
-	health = 5
 	gatex = 1500
 	BossHp --;
 	if (BossHp <= -1000)
@@ -277,6 +304,7 @@ function drawboss() {
   }
   fill(0,0,255)
   ellipse(xpos, ypos, rad, rad);
+  image(bossSprite,xpos-40,ypos-60,125,125)
   fill(165,242,243)
   textSize(25)
   playerDamage();
@@ -476,30 +504,35 @@ function playerDamage()
   var dist7 = sqrt((playerX - 1000)*(playerX - 1000) + (playerY - 350)*(playerY - 350))
   var dist8 = sqrt((playerX - PyramidX)*(playerX - PyramidY) + (playerY - PyramidX)*(playerY - PyramidX));
   var dist9 = sqrt((playerX - Spinx)*(playerX - Spinx) + (playerY - Spiny)*(playerY - Spiny));
-
-  if (dist < 50)
+  if (bossPhase1 == true)
   {
-    deductHealth(1,30);
+	if (dist < 50)
+	{
+		deductHealth(1,30);
+	}
+	if (dist2 < 25)
+	{
+		deductHealth(1,30);
+	}
+	if (dist3 < 15)
+	{
+		deductHealth(1,30);
+	}
+	if (dist4 < 15)
+	{
+		deductHealth(1,30);
+	}
+	if (dist5 < 30)
+  	{
+  	  deductHealth(1,30);
+  	}
   }
-  if (dist2 < 25)
+  if (bossPhase2 == true)
   {
-    deductHealth(1,30);
-  }
-  if (dist3 < 15)
-  {
-    deductHealth(1,30);
-  }
-  if (dist4 < 15)
-  {
-    deductHealth(1,30);
-  }
-  if (dist5 < 30)
-  {
-    deductHealth(1,30);
-  }
-  if (dist6 < 25)
-  {
-    deductHealth(1,30);
+  	if (dist6 < 25)
+ 	{
+    	deductHealth(1,30);
+ 	}
   }
   if (thirdboss == true)
   {
@@ -508,13 +541,16 @@ function playerDamage()
       deductHealth(1,30)
     }
   }
-  if (dist8 <= 25)
+  if (bossPhase3 == true)
   {
-  	deductHealth(1,30);
-  }
-  if (dist9 <= 12.5)
-  {
-  	deductHealth(1,30);
+  	if (dist8 <= 25)
+  	{
+  		deductHealth(1,30);
+  	}
+ 	if (dist9 <= 12.5)
+  	{
+  		deductHealth(1,30);
+  	}
   }
   textSize(15)
   fill(255,255,255)

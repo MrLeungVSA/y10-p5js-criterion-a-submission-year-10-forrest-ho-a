@@ -122,7 +122,7 @@ Full Restore - 5%
 	if (Poison == true)
 	{
 		fill(255,188,0)
-		text('Poison',playerX,playerY-10)
+		image(poisonItem,playerX,playerY-25,25,25)
 		hasItem = true
 		Big = false
 		Giant = false

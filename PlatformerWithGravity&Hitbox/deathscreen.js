@@ -30,10 +30,9 @@ function drawdeathscreen()
 	{
 		if (mouseIsPressed == true)
 		{
-			/*Invincibility = true
+			Invincibility = true
 			InvincibilityTimer = 2
 			canvasID = 1;
-			BossHp = 100;
 			health = 5;
 			playerY = 300
 			playerX = 500
@@ -42,7 +41,19 @@ function drawdeathscreen()
 			yspeed = 3
 			icex = 100
 			icey = 100
-			xpos = 35*/
+			xpos = 35
+			if (difficulty == 0)
+			{
+				BossHp = 50
+			}
+			if (difficulty == 1)
+			{
+				BossHp = 100
+			}
+			if (difficulty == 2)
+			{
+				BossHp = 200
+			}
 		}
 		fill(0,40,170)
 		text('Retry',450,375)

@@ -16,7 +16,7 @@ function drawwinscreen()
 	}
 	if (BossHp <= -500)
 	{
-		text('Health: ' + health + '/5',400,350)
+		text('Health: ' + health + ' / 5',400,350)
 	}
 	if (BossHp <= -550)
 	{
