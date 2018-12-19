@@ -31,6 +31,7 @@ function preload()
 	bossSprite = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Boss.png');
 	backgroundImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/background.png');
 	PlatformImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Platform.png');
+	IceImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/IceCubeProjectile.png');
 
 }
 //problem at 460-510,395
@@ -95,8 +96,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
-	//(IceImg,500,500,100,100)
-
+	//image(IceImg,600,600,100,100)
 }
 
 

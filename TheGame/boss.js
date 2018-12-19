@@ -305,7 +305,7 @@ function drawboss() {
   }
   fill(0,0,255)
   //ellipse(xpos, ypos, rad, rad);
-  image(bossSprite,xpos-45,ypos-60,125,125)
+  image(bossSprite,xpos-50,ypos-60,125,125)
   fill(165,242,243)
   textSize(25)
   playerDamage();
@@ -802,13 +802,13 @@ function attack2()
     iceCubeIsOnScreen = true;
     icecubey = ypos - 25;
     fill(165,242,243)
-    ellipse(icecubex,icecubey,50,50)              
+    image(IceImg,icecubex-35,icecubey-35,77,77)           
   }
   else
   {
     icecubex = icecubex + icespeed * icecubemove
-    fill(165,242,243)
-    ellipse(icecubex,icecubey,50,50);  
+    fill(165,242,243) 
+    image(IceImg,icecubex-35,icecubey-35,77,77)
     if (icecubex > 1000)
     {
       iceCubeIsOnScreen = false;
@@ -820,13 +820,13 @@ function attack2()
     icecubey2 = ypos -50;
     iceCubeIsOnScreen2 = true;
     fill(165,242,243)
-    ellipse(icecubex2,icecubey2,75,75)
+    image(IceImg,icecubex2-85,icecubey2-85,175,175) 
   }
   else
   {
     icecubex2 = icecubex2 + icespeed2 * icecubemove
     fill(165,242,243)
-    ellipse(icecubex2,icecubey2,100,100);
+    image(IceImg,icecubex2-85,icecubey2-85,175,175) 
     if (icecubex2 > 1000)
     {
       iceCubeIsOnScreen2 = false
@@ -838,13 +838,13 @@ function attack2()
     icecubey3 = ypos -10;
     iceCubeIsOnScreen3 = true;
     fill(165,242,243)
-    ellipse(icecubex3,icecubey3,25,25)
+    image(IceImg,icecubex3-25,icecubey3-25,50,50) 
   }
   else
   {
     icecubex3 = icecubex3 + icespeed3 * icecubemove
     fill(165,242,243)
-    ellipse(icecubex3,icecubey3,25,25);
+    image(IceImg,icecubex3-25,icecubey3-25,50,50) 
     if (icecubex3 > 1000)
     {
       iceCubeIsOnScreen3 = false
