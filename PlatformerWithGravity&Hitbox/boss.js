@@ -103,6 +103,7 @@ function setupboss() {
 
 }
 function drawboss() {
+  //image(backgroundImg,0,0,1000,700)
   // Update the position of the shape
   xpos = xpos + xspeed * xdirection;
   ypos = ypos + yspeed * ydirection;
@@ -303,8 +304,8 @@ function drawboss() {
   {
   }
   fill(0,0,255)
-  ellipse(xpos, ypos, rad, rad);
-  image(bossSprite,xpos-40,ypos-60,125,125)
+  //ellipse(xpos, ypos, rad, rad);
+  image(bossSprite,xpos-45,ypos-60,125,125)
   fill(165,242,243)
   textSize(25)
   playerDamage();

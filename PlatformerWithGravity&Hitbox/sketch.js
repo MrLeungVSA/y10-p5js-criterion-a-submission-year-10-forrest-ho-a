@@ -14,6 +14,8 @@ var fullItem
 var shieldItem
 var bossSprite
 var backgroundImg
+var PlatformImg
+var IceImg
 
 function preload()
 {
@@ -27,7 +29,9 @@ function preload()
 	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Shield.png');
 	shieldItem = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Shield.png');
 	bossSprite = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Boss.png');
-	backgroundImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Boss.png');
+	backgroundImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/background.png');
+	PlatformImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/Platform.png');
+	IceImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/PlatformerWithGravity&Hitbox/Sprites/IceCube.jpg');
 
 }
 //problem at 460-510,395
@@ -66,7 +70,8 @@ function draw()
 	}
 	if (canvasID == 1)
 	{
-		background(0,0,0);
+		image(backgroundImg,0,0,1000,700)
+		//background(178,251,255);
 		showControls();	
 		drawHealth();
 		showPlatforms(0);
@@ -91,7 +96,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
-	//image(bossSprite,700,100,400,400)
+	image(IceImg,0,0,1000,700)
 
 
 

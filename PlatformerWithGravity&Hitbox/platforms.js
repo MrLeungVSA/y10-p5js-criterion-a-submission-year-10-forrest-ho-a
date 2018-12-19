@@ -187,6 +187,7 @@ function showPlatforms(questionID)
 			{
 				fill(125,125,125);
 			}
+			fill(225,225,225)
 			rect(platforms[c][0],platforms[c][1],platforms[c][2],platforms[c][3]);	
 			platforms[1][c] -=2;		
 		}
