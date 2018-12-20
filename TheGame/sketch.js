@@ -21,6 +21,8 @@ var BossSpritePhaseThree
 var smallExplosion
 var gif_createImg
 var gif_createImgTwo
+var snowBall
+var explodeImage
 
 function preload()
 {
@@ -41,6 +43,8 @@ function preload()
 	BossSpritePhaseThree = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/bossPhaseThree.png');
 	gif_createImg = createImg('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/HugeExplosion.gif')
 	gif_createImgTwo = createImg('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Special_Effect_-_Explosion.gif')
+	snowBall = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Snowball.png')
+	explodeImage = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Screenshot 2018-12-20 at 6.41.26 PM.png')
 
 }
 //problem at 460-510,395

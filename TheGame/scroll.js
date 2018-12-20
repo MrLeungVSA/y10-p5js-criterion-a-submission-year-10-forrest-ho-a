@@ -311,18 +311,15 @@ Full Restore - 5%
 	{
 		if (bossPhase1 == true)
 		{
-			gif_createImgTwo.show();
-			gif_createImgTwo.position(xpos-100,ypos-50);
+			image(explodeImage,xpos-100,ypos-50);
 		}
 		if (bossPhase2 == true)
 		{
-			gif_createImgTwo.show();
-			gif_createImgTwo.position(homeX-100,homeY-50);
+			image(explodeImage,homeX-100,homeY-50);
 		}
 		if (bossPhase3 == true)
 		{
-			gif_createImgTwo.show();
-			gif_createImgTwo.position(700,250);
+			image(explodeImage,700,250);
 		}
 		splodeTimer +=1;
 	}
