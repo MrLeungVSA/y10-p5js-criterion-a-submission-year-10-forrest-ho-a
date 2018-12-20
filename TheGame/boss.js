@@ -491,7 +491,8 @@ function boss3()
   {
     Size3+=1;
   }
-  ellipse(1000,350,Size3,Size3)
+  //ellipse(1000,350,Size3,Size3)
+  image(BossSpritePhaseThree,600,0,Size3,Size3)
 
 }
 
@@ -907,10 +908,12 @@ function attack4()
       BeamMove = true
     }
   }
+
     fill(0,239,255)
     rect(SkyBeamX,SkyBeamY,50,BeamHeight)
     fill(178,178,178)
-    rect(SkyBeamX-75,0,200,50)
+    //rect(SkyBeamX-75,0,200,50)
+    image(PlatformImg,SkyBeamX-75,-20,200,100)
 }
 function keyPressed()
 {
