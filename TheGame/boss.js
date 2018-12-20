@@ -122,6 +122,7 @@ function drawboss() {
 		if (ypos > height - rad || ypos < rad) {
 		ydirection *= -1;
 		}
+      image(bossSprite,xpos-50,ypos-60,125,125)
 	    attack1();
 	    attack2();
 	    attack3();
@@ -167,6 +168,7 @@ function drawboss() {
 		if (ypos > height - rad || ypos < rad) {
 		ydirection *= -1;
 		}
+      image(bossSprite,xpos-50,ypos-60,125,125)
 	    attack1();
 	    attack2();
 	    attack3();
@@ -227,6 +229,7 @@ function drawboss() {
 		if (ypos > height - rad || ypos < rad) {
 		ydirection *= -1;
 		}
+      image(bossSprite,xpos-50,ypos-60,125,125)
 	    attack1();
 	    attack2();
 	    attack3();
@@ -270,7 +273,7 @@ function drawboss() {
 		}
 		if (rad <= 0 && yspeed <= 0)
 		{
-			xpos = 1000
+			xpos = 1700
 		}
 	}
 	if (BossHp >= 0)
@@ -305,7 +308,6 @@ function drawboss() {
   }
   fill(0,0,255)
   //ellipse(xpos, ypos, rad, rad);
-  image(bossSprite,xpos-50,ypos-60,125,125)
   fill(165,242,243)
   textSize(25)
   playerDamage();
@@ -738,7 +740,7 @@ function atk5()
     homeY += homeSpeed
   }
   fill(104,215,255)
-  ellipse(homeX,homeY,Size,Size)
+  image(BossSpritePhase,homeX-40,homeY-40,85,85)
 }
 function attack3()
 {

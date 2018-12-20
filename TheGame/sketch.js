@@ -35,6 +35,7 @@ function preload()
 	IceImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/IceCubeProjectile.png');
 	BossSpritePhase = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Boss2.png');
 
+
 }
 //problem at 460-510,395
 //problem at x,495
@@ -98,7 +99,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
-	image(BossSpritePhase,600,600,100,100)
+	image(PlatformImg,600,600,100,100)
 }
 
 

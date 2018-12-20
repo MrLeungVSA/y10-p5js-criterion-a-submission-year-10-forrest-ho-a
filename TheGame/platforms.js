@@ -71,7 +71,7 @@ function setupPlatforms()
 	// 0 - 6
 	// big platform on the bottom
 	platforms[0][0] = 1;
-	platforms[0][1] = 675;
+	platforms[0][1] = 775;
 	platforms[0][2] = 1000;
 	platforms[0][3] = 50;
 	platforms[0][4] = 0;
