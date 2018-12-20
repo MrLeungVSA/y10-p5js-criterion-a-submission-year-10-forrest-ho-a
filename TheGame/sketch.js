@@ -20,6 +20,7 @@ var BossSpritePhase
 var BossSpritePhaseThree
 var smallExplosion
 var gif_createImg
+var gif_createImgTwo
 
 function preload()
 {
@@ -38,7 +39,8 @@ function preload()
 	IceImg = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/IceCubeProjectile.png');
 	BossSpritePhase = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Boss2.png');
 	BossSpritePhaseThree = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/bossPhaseThree.png');
-	gif_createImg = createImg('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/GiantBomb.gif')
+	gif_createImg = createImg('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/HugeExplosion.gif')
+	gif_createImgTwo = createImg('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-forrest-ho-a/TheGame/Sprites/Special_Effect_-_Explosion.gif')
 
 }
 //problem at 460-510,395
@@ -74,6 +76,10 @@ function draw()
 	if (canvasID == 3)
 	{
 		drawmainmenu();
+		gif_createImgTwo.hide();
+		gif_createImgTwo.position(400,350);
+		gif_createImg.hide();
+		gif_createImg.position(8,80);
 	}
 	if (canvasID == 1)
 	{
@@ -103,9 +109,7 @@ function draw()
 		{
 			drawwinscreen();
 		}
-	image(BossSpritePhaseThree,600,600,100,100)
-	gif_createImg.show();
-	gif_createImg.position(0,0);
+	//image(BossSpritePhaseThree,600,600,100,100)
 }
 
 

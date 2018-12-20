@@ -26,7 +26,7 @@ var generateLoot = false
 // items
 var Small = false
 var Big = false
-var Giant = false
+var Giant = true
 var HealthUp = false
 var FullHp = false
 var GiveLoot = false
@@ -37,6 +37,10 @@ var PoisonAmount = 1
 var Immune = false
 var Invincibility = false
 var InvincibilityTimer = 5
+var Explode = false
+var GifCountdown = 0
+var splode = false
+var splodeTimer = 0
 // item usage
 
 var hasItem = false
@@ -169,8 +173,10 @@ Full Restore - 5%
 		PoisonTick = false
 		if (keyIsDown(32))
 		{
+			splodeTimer = 0;
 			BossHp -=2;
 			Small = false
+			splode = true
 		}
 	}
 	if (Big == true)
@@ -187,6 +193,8 @@ Full Restore - 5%
 		PoisonTick = false
 		if (keyIsDown(32))
 		{
+			splodeTimer = 0;
+			splode = true
 			BossHp -=4;
 			Big = false
 		}
@@ -207,6 +215,7 @@ Full Restore - 5%
 		{
 			BossHp -= 10;
 			Giant = false
+			Explode = true
 		}
 	}
 	if (HealthUp == true)
@@ -282,6 +291,52 @@ Full Restore - 5%
 		{
 			InvincibilityTimer = 5
 		}
+	if (Explode == true)
+	{
+		gif_createImg.show();
+		//gif_createImg.frame([0]);
+		gif_createImg.position(8,80);
+		GifCountdown ++;
+	}
+	if (GifCountdown >= 180)
+	{
+		Explode = false
+	}
+	if (Explode == false)
+	{
+		gif_createImg.hide();
+		GifCountdown = 0
+	}
+	if (splode = true)
+	{
+		if (bossPhase1 == true)
+		{
+			gif_createImgTwo.show();
+			gif_createImgTwo.position(xpos-100,ypos-50);
+		}
+		if (bossPhase2 == true)
+		{
+			gif_createImgTwo.show();
+			gif_createImgTwo.position(homeX-100,homeY-50);
+		}
+		if (bossPhase3 == true)
+		{
+			gif_createImgTwo.show();
+			gif_createImgTwo.position(700,250);
+		}
+		splodeTimer +=1;
+	}
+	if (splodeTimer >= 100)
+	{
+		splode == false
+	}
+	console.log(splodeTimer)
+	console.log(splode)
+	if (splode == false)
+	{
+		splodeTimer = 0;
+		gif_createImgTwo.hide();
+	}
 
 }
 function math()

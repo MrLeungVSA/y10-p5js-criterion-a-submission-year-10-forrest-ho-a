@@ -15,6 +15,7 @@ function setupmainmenu()
 
 function drawmainmenu()
 {
+
 	background(0,255,255);
 	fill(0,0,0);
 	textSize(20);
@@ -38,7 +39,7 @@ function drawmainmenu()
 		text("Expert",75,400);
 		canvasID = 1;
 		difficulty = 2;
-		BossHp = 20;
+		BossHp = 200;
 		Invincibility = true
 		InvincibilityTimer = 2
 		health = 5;
