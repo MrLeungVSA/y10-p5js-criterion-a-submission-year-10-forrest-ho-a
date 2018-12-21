@@ -411,6 +411,7 @@ function atk8()
   }
   fill(0,222,255)
   ellipse(Spinx,Spiny,25,25)
+  image(snowBall,Spinx-12.5,Spiny-12.5,25,25)
 }
 function atk7()
 {
@@ -471,6 +472,7 @@ function atk7()
     fill(203,255,255)
   }
   ellipse(PyramidX,PyramidY,50,50)
+  image(icePyramid,PyramidX-50,PyramidY-50,100,100)
 }
 function boss3()
 {
@@ -551,7 +553,7 @@ function playerDamage()
   	{
   		deductHealth(1,30);
   	}
- 	if (dist9 <= 12.5)
+ 	if (dist9 <= 5)
   	{
   		deductHealth(1,30);
   	}

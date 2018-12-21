@@ -26,7 +26,7 @@ var generateLoot = false
 // items
 var Small = false
 var Big = false
-var Giant = true
+var Giant = false
 var HealthUp = false
 var FullHp = false
 var GiveLoot = false
@@ -294,7 +294,6 @@ Full Restore - 5%
 	if (Explode == true)
 	{
 		gif_createImg.show();
-		//gif_createImg.frame([0]);
 		gif_createImg.position(8,80);
 		GifCountdown ++;
 	}
@@ -307,32 +306,29 @@ Full Restore - 5%
 		gif_createImg.hide();
 		GifCountdown = 0
 	}
-	if (splode = true)
+	if (splode == true)
 	{
 		if (bossPhase1 == true)
 		{
-			image(explodeImage,xpos-100,ypos-50);
+			image(explodeImage,xpos-125,ypos-75,300,200);
 		}
 		if (bossPhase2 == true)
 		{
-			image(explodeImage,homeX-100,homeY-50);
+			image(explodeImage,homeX-125,homeY-75,300,200);
 		}
 		if (bossPhase3 == true)
 		{
-			image(explodeImage,700,250);
+			image(explodeImage,700,250,300,200);
 		}
 		splodeTimer +=1;
 	}
 	if (splodeTimer >= 100)
 	{
-		splode == false
+		splode = false
 	}
-	console.log(splodeTimer)
-	console.log(splode)
 	if (splode == false)
 	{
 		splodeTimer = 0;
-		gif_createImgTwo.hide();
 	}
 
 }
